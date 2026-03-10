@@ -185,7 +185,7 @@ class Mob(pg.sprite.Sprite):
         self.vx = randrange(1, 4)
         if self.rect.centerx > WIDTH:
             self.vx *= -1
-        self.rect.y = randrange(HEIGHT / 2)
+        self.rect.y = randrange(int(HEIGHT / 2))
         self.vy = 0
         self.dy = 0.5
 
@@ -210,3 +210,4 @@ class Mob(pg.sprite.Sprite):
 
 
         
+
