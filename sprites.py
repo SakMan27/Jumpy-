@@ -66,9 +66,9 @@ class Player(pg.sprite.Sprite):
         self.animate()
         self.acc = vec(0, PLAYER_GRAV)
         keys = pg.key.get_pressed()
-        if keys[pg.K_LEFT]:
+        if keys[pg.K_LEFT] or keys[pg.K_a]:
             self.acc.x = -PLAYER_ACC
-        if keys[pg.K_RIGHT]:
+        if keys[pg.K_RIGHT] or keys[pg.K_d]:
             self.acc.x = PLAYER_ACC
 
         # apply friction
@@ -210,4 +210,3 @@ class Mob(pg.sprite.Sprite):
 
 
         
-
